@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="height: 100vh; background: chartreuse;">
+
+    </div>
+    <div style="height: 100vh; background:crimson;">
+
+    </div>
+    <div id="box">
+      <div class="round-box" onclick="show()">
+        <img id="png-up" src="https://cdn.businessinsider.de/wp-content/uploads/2021/11/Icon_Arrow_up.png">
+        <img id="png-down" src="https://cdn.businessinsider.de/wp-content/uploads/2021/11/Icon_Arrow_down.png">
+      </div>
+      <div class="box-1">
+        <div class="column">
+          <img id="bi-logo" src="https://cdn.businessinsider.de/wp-content/uploads/2021/11/Logo_BI.png">
+          <h1>
+            1 Monat für 1€
+          </h1>
+        </div>
+        <div class="column">
+          <a href="https://www.businessinsider.de/abo/?tpcc=onsite_bi_stickyfooter_blackfriday" title="Jetst abo testen"
+            id="btn1">
+            JETZT ABO TESTEN
+          </a>
+          <a href="https://www.businessinsider.de/abo/?tpcc=onsite_bi_stickyfooter_blackfriday" title="Abo testen"
+            id="btn3">
+            ABO TESTEN
+          </a>
+          <img id="x" onClick="hide()" src="https://cdn.businessinsider.de/wp-content/uploads/2021/11/Icon_Close.png">
+        </div>
+      </div>
+      <div class="box-2">
+        <img id="ipad" src="https://cdn.businessinsider.de/wp-content/uploads/2021/11/iPad_BI.png">
+        <div class=box-3>
+          <h3> Better every day </h3>
+          <p> <img class="check" src="https://cdn.businessinsider.de/wp-content/uploads/2021/11/Icon_Check.png">
+            <strong>Finanzstrategien</strong> von Experten für die passende Geldeinlage </p>
+          <p> <img class="check" src="https://cdn.businessinsider.de/wp-content/uploads/2021/11/Icon_Check.png">
+            <strong>Exklusive News und Analysen</strong> aus Deutschlands wichtigsten Branchen </p>
+          <p> <img class="check" src="https://cdn.businessinsider.de/wp-content/uploads/2021/11/Icon_Check.png">
+            <strong>Karierretipps</strong> von HR-Profis für ein erfolgreiches Arbeitsleben </p>
+          <p> <img class="check" src="https://cdn.businessinsider.de/wp-content/uploads/2021/11/Icon_Check.png">
+            <strong>inkl. Gründerszene+</strong> </p>
+        </div>
+      </div>
+    
+      <div class="handy-button">
+        <button id="btn2" ng-Click="startCheckout('[%% monthly-term-id %%]')">
+          JETZT ABO TESTEN
+        </button>
+      </div>
+    </div>
+    
+    
+    <script>
+      function show() {
+        document.getElementById('box').classList.toggle('active');
+        document.getElementById('png-up').classList.toggle('active');
+        document.getElementById('png-down').classList.toggle('active');
+      }
+
+      function hide() {
+        document.getElementById('box').style.display = "none";
+      }
+    </script>
+
+
+    <style>
+@font-face {
+  font-family: "LabGrotesque";
+  src: url("//media.businessinsider.com/public/fonts/LabGrotesque-Regular.woff2") format("woff2"),
+  url("//media.businessinsider.com/public/fonts/LabGrotesque-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+#body{
+  height: 100vh;
+  background-color: transparant;
+}
+
+#checkout-container {
+  background-color: transparent;
+}
+
+#png-up{
+  width:11px;
+  height:8px;
+}
+
+#png-up.active{
+  display:none;
+}
+
+#png-down{
+  width:11px;
+  height:8px;
+  display:none;
+}
+
+#png-down.active{
+  display:block;
+}
+
+h1{
+  color: white;
+  font-family: LabGrotesque Black, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+h3{
+  font-family: LabGrotesque, Helvetica, sans-serif;
+  color: white;
+  margin:0 0 5px 0;
+  padding:0;
+}
+
+p{
+  font-family: LabGrotesque, Helvetica, sans-serif;
+  color:white;
+  font-size:10px;
+  margin:-5px 0 0 0;
+  padding:0;
+}
+
+#btn1{
+  text-align: center;
+  font-size: 8px;
+  padding: 6px 40px 6px 40px;
+  background-color: #096FFA;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-family: LabGrotesque Black, Helvetica, sans-serif;
+  font-weight: bold;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.round-box {
+  width: 50px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: #111516;
+  position:absolute;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  flex-direction: column;
+  cursor:pointer;
+  top: -20px;
+}
+
+#box{
+  background: #111516;
+  width: 100%;
+  height: 170px;
+  display: flex;
+  align-items:center;
+  flex-direction: column;
+  position: static;
+  transform: translateY(124px);
+  transition: transform 0.4s linear;
+  margin-top: 20px;
+}
+
+#box.active{
+   transform: translateY(0);
+}
+
+.box-1{
+  width: 100%;
+   max-width: 1230px;
+  padding: 7px 0 7px 0;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 0.8px dashed white;
+}
+
+.box-2{
+  width: 100%;
+  max-width: 1230px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin:10px 0 10px 0;
+}
+
+.box-3{
+  display: flex;
+  flex-direction: column;
+}
+
+.column{
+  font-family: LabGrotesque, Helvetica, sans-serif;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.handy-button{
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  display:none;
+}
+
+#btn2{
+  text-align: center;
+  font-size: 8px;
+  padding: 10px 40px 10px 40px;
+  background-color: #096FFA;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-family: LabGrotesque Black, Helvetica, sans-serif;
+  font-weight: bold;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+#btn3{
+  display: none;
+  text-align: center;
+  font-size: 6px;
+  padding: 5px 15px 5px 15px;
+  background-color: #096FFA;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-family: LabGrotesque Black, Helvetica, sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+#bi-logo{
+  width:25px;
+  height:20px;
+  margin: 0 10px 0 0;
+}
+
+#x{
+  width:11px;
+  height:11px;
+  margin: 0 0 0 10px;
+  cursor: pointer;
+}
+
+#ipad{
+  width:150px;
+  height:100px;
+  margin: 0 35px 0 0px;
+}
+
+.check{
+  width:7px;
+  height:7px;
+  margin-right: 2px;
+}
+
+/* Mobile */
+
+@media(max-width: 768px){
+  .box-1{
+  width:95%;
+  margin-top:5px
+  }
+  
+  .box-2{
+  width:95%;
+  }
+  
+  #box{
+    height: 200px;
+  transform: translateY(151px);
+  }
+  
+  #box.active{
+   transform: translateY(0);
+ }
+  
+  #ipad{
+  display:none;
+  }
+  
+  #btn1{
+   display:none;
+  }
+  
+  #btn3{
+  display:block;
+  }
+  
+  .round-box{
+  width: 30px;
+  height: 20px;
+  top: -9px;
+  }
+  
+  .handy-button{
+  display: block;
+    padding-bottom:20px;
+}
+  
+  #png-up{
+  width:8px;
+  height:5px;
+}
+
+#png-up.active{
+  display:none;
+}
+
+#png-down{
+  width:8px;
+  height:5px;
+  display:none;
+}
+
+#png-down.active{
+  display:block;
+}
+  
+  h3{
+   font-size:14px;
+  }
+  
+  p{
+  font-size:8px;
+  }
+}
+
+
+    </style>
+</body>
+</html>

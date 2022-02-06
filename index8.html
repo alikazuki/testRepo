@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="link-footer-wrapper">
+        <div class="link-item-wrapper un">
+        <a class="hori" href="">
+        <p>Eine digitale Ausstellung des Volksbund Deutsche Kriegsgräberfürsorge e. V.</p>    
+        <img class="logo-img2" src="https://pse4-projektgalerie.de/wp-content/uploads/2021/12/Volksbund_logo-1.png" alt="">
+        </a>
+        </div>
+            <div class="link-item-wrapper">
+                <a href="">
+                    <img class="logo-img" src="https://pse4-projektgalerie.de/wp-content/uploads/2021/12/logo-twitter-1.png" alt="">
+                </a>
+            </div>
+            <div class="link-item-wrapper">
+                <a href="">
+                    <img class="logo-img" src="https://pse4-projektgalerie.de/wp-content/uploads/2021/12/Vector.png" alt="">
+                </a>
+            </div> 
+            <div class="link-item-wrapper">
+                <a href="https://pse4-projektgalerie.de/impressum">
+                    Impressum
+                </a>
+            </div>
+            <div class="link-item-wrapper">
+                <a href="https://pse4-projektgalerie.de/kontaktformular">
+                    Kontakt
+                </a>
+        </div>
+    </div>
+
+    <style>
+        body{
+            background-color: #333;
+        }
+        .link-footer-wrapper{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+        }
+
+        .link-item-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arvo;
+            width: 18%;
+            color: white;
+        }
+
+        .link-item-wrapper p {
+            margin: 0;
+        }
+
+        .hori{
+            flex-direction: row;
+        }
+
+        .link-item-wrapper a{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-decoration: none;
+        }
+
+        .logo-img{
+           height: 30px;
+           width: 30px;
+        }
+
+        .logo-img2{
+           height: 30px;
+           width: 30px;
+          
+        }
+
+        @media (max-width: 768px){
+            .link-footer-wrapper{
+                flex-direction: column;
+            }
+
+            .link-item-wrapper{
+                margin-top: 10px;
+            }
+
+            .un{
+                display: none;
+            }
+        }
+    </style>
+</body>
+</html>

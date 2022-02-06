@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="gallery-footer-wrapper">
+        <div class="gallery-button-wrapper">
+            <div style="display:flex; justify-content:center;">
+                <a href="">
+                    <div class="normal-button">
+                        <img class="small-img" src="https://pse4-projektgalerie.de/wp-content/uploads/2021/12/Vector-1.svg">
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="gallery-button-wrapper">
+            <div style="display:flex; justify-content:center;">
+                <div class="galery-button">
+                    <img class="small-img"
+                        src="https://pse4-projektgalerie.de/wp-content/uploads/2021/12/collections_round_black_24dp-1-1.svg">
+                </div>
+            </div>
+        </div>
+        <div class="gallery-button-wrapper">
+            <div style="display:flex; justify-content:center;">
+                <a href="">
+                    <div class="continue-button">
+                        Weiter
+                        <img class="small-img2"
+                            src="https://pse4-projektgalerie.de/wp-content/uploads/2021/12/arrow_right_alt_round_black_24dp-1-1.svg">
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        body{
+            background-color: #333;
+        }
+        .gallery-footer-wrapper{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+        }
+        .gallery-button-wrapper{
+            width: 33.33%;
+        }
+        .small-img{
+        height: 17px;
+        width: 17px;
+    } 
+      .small-img2{
+        height: 17px;
+        width: 17px;
+        margin-left: 5px;
+    } 
+     
+    .normal-button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100%;
+        background-color: rgba(255, 255, 255, 0.1);
+        height: 45px;
+        width: 45px;
+        cursor: pointer;
+    }
+
+    .galery-button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100%;
+        background-color: rgba(255, 255, 255, 0.1);
+        height: 45px;
+        width: 45px;
+        cursor: pointer;
+    }
+     
+    .continue-button{
+        padding: 5px 35px;
+        font-size: 12px;
+        color: white;
+        font-family: Arvo;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 25px;
+        background-color: rgba(255, 255, 255, 0.1);
+        height: 45px;
+        width: auto;
+        cursor: pointer;
+    }
+
+     @media (max-width: 768px){
+         .small-img2{
+             height: 24px;
+             width: 24px;
+             margin: 0;
+         }
+
+         .continue-button{
+             font-size: 0;
+             border-radius: 100%;
+             padding: 0;
+             width: 45px;
+         }
+     }
+    </style>
+</body>
+</html>
